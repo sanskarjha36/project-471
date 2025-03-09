@@ -1,0 +1,80 @@
+
+.Header {
+    display: flex;
+    flex-direction: column; /* Stacks HD1 and HD2 vertically */
+    align-items: center; /* Centers them horizontally */
+    justify-content: center; /* Centers them vertically */
+    height: 36vh; /* Full viewport height */
+    background-color: #333; /* Optional: Background color for testing */
+    transition: 0.5s;
+    box-shadow: 0px 10px 240px black inset;
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+    background-image: linear-gradient(135deg, rgb(68, 68, 68), rgba(255, 177, 32, 0.556),rgb(87, 102, 65));
+  }
+
+
+  @keyframes color{
+    0% {background-position:0 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0 50%;}
+    }
+    
+
+.HD1{
+    display: flex;
+    align-self: center;
+    color: antiquewhite;
+    font-family: sans-serif;
+    font-size: 5rem;
+    margin-top: 3rem;
+    text-shadow: 0px 12px 36px rgba(0, 0, 0, 0.964);
+}
+.HD2{
+    display: flex;
+    align-self: center;
+    color: antiquewhite;
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: 100;
+    margin-bottom: 3rem;
+    text-shadow: 0px 12px 36px rgba(0, 0, 0, 0.964);
+}
+
+
+.Lists{
+  height: 5rem;
+    background-color: black;
+    padding: 1rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-bottom: 4rem;
+    box-shadow: 0px 4px 36px rgba(255, 237, 155, 0.22);
+}
+
+ul.tabs {
+    display: flex; /* Makes list items align horizontally */
+    justify-content: center; /* Centers the list items horizontally */
+    list-style: none; /* Removes the default bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+  }
+  
+ul.tabs li {
+    margin: 0 2rem; /* Adds spacing between list items */
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: #eaeaea;
+    transition: color 0.25s ease;
+    transition:0.25s ease-in-out;
+  }
+  
+ul.tabs li:hover {
+    color: #ffb120; /* Changes color on hover */
+    font-size: 2.9rem;
+    transition:0.25s ease-in-out;
+  }
