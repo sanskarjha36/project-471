@@ -1,0 +1,70 @@
+/* Wrapper for menu and dropdown */
+.user-menu-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Dropdown Menu (Hidden by Default) */
+.user-dropdown {
+    border: 0.16rem solid rgba(255, 228, 196, 0.482);
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    background: rgba(0, 0, 0, 0.471);
+    backdrop-filter: blur(8rem);
+    width: 18rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 0;
+    z-index: 2000;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: 200;
+
+    /* Animation properties */
+    opacity: 0;
+    transform: translateY(-10px); /* Move slightly up */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none; /* Prevents interaction when hidden */
+}
+
+/* When menu is open */
+.user-menu-wrapper .user-dropdown.show {
+    opacity: 1;
+    transform: translateY(0); /* Moves dropdown to normal position */
+    pointer-events: auto; /* Allows interaction */
+}
+
+/* Dropdown List Styling */
+.user-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-dropdown li {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border-bottom: 0.16rem solid rgba(255, 255, 255, 0.2);
+    margin: 0 1rem;
+}
+
+.user-dropdown li:last-child {
+    border-bottom: none;
+}
+
+.user-dropdown li a {
+    color: rgb(193, 193, 193); /* Default text color */
+    text-decoration: none;
+    display: block;
+    transition: color 0.2s ease; /* Smooth color transition */
+    transition:0.1s ease-in-out;
+}
+
+.user-dropdown li a:hover {
+    color: rgb(255, 210, 156);
+    font-size: 2.4rem;
+    transition: color 0.2s ease; /* Smooth color transition */
+    transition:0.1s ease-in-out;
+}

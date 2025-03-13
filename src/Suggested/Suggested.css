@@ -1,0 +1,105 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Ensures 3 cards per row */
+    gap: 10rem; /* Space between cards */
+    justify-content: center; /* Centers grid content */
+    width: 100%;
+    max-width: 90vw;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
+    height: 3rem;
+    background: rgba(0, 0, 0, 0.693);
+    border-radius: 1rem;
+    border: 0.16rem solid rgba(103, 103, 103, 0.935); /* Corrected border */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.388); /* Softer, visible shadow */
+    padding: 1rem;
+}
+
+.card {
+    width: 35rem;
+    height: 51rem;
+    background-color: rgb(56, 59, 59);
+    border-radius: 2rem;
+    border: 0.16rem solid rgba(245, 245, 220, 0.652);
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    box-shadow: 0rem 0rem 8rem rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    cursor: pointer; /* Add hover effect */
+    transition: color 0.25s ease;
+    transition:0.25s ease-in-out;
+}
+.card:hover{
+    box-shadow: 0rem 0rem 4rem rgba(26, 9, 255, 0.349);
+    border: 0.2rem solid rgb(255, 41, 241);
+    cursor: pointer; /* Add hover effect */
+    transition:0.25s ease-in-out;
+}
+
+.pic{
+    object-fit: cover;
+    width: 34rem;
+    height: 24rem;
+    border-top-left-radius: 1.6rem;
+    border-top-right-radius: 1.6rem;
+    border-bottom-left-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+    margin-top: 0.5rem;
+    box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.Title{
+    font-family: sans-serif;
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: beige;
+    padding-top: 1.6rem;
+}
+.Location{
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    font-weight: 336;
+    color: rgb(183, 183, 183);
+
+    
+}
+.Price{
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    font-weight: 336;
+    color: rgb(191, 191, 191);
+}
+.Description{
+    padding-left: 1.2rem;
+    padding-right: 1rem;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    font-weight: 336;
+    color: rgb(191, 191, 191);
+    display: -webkit-box;
+    -webkit-line-clamp: 7; /* Limits to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Ensures responsiveness */
+@media (max-width: 1024px) {
+    .card-container {
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        justify-content: center; /* Center cards if wrapped */
+        gap: 1rem; /* Adds spacing when wrapped */
+    }
+}
