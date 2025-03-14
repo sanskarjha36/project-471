@@ -1,27 +1,26 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
-import SlideShow from "./SlideShow/SlideShow";
-import Header from "./Header/Header";
-import Suggested from "./Suggested/Suggested";
-import SFooter from "./SFooter/SFooter";
-import Footer from "./Footer/Footer";
-import "./App.css";
+import Home from "./pages/Home/Home";
+import Sign_In from "./pages/Sign_In/Sign_In";
+import Sign_Up from "./pages/Sign_Up/Sign_Up";
+import View_Service from "./pages/View_Service/View_Service"
 
 const App = () => {
   const [showSearch, setShowSearch] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const searchElement = document.querySelector(".search"); // Find the search bar
+      const searchElement = document.querySelector(".search"); 
       if (!searchElement) return;
 
-      const rect = searchElement.getBoundingClientRect(); // Get search bar position
-      const navbarHeight = document.querySelector(".navbar").offsetHeight; // Navbar height
+      const rect = searchElement.getBoundingClientRect();
+      const navbarHeight = document.querySelector(".navbar").offsetHeight;
 
       if (rect.top < navbarHeight) {
-        setShowSearch(true); // Show in navbar when scrolled past
+        setShowSearch(true);
       } else {
-        setShowSearch(false); // Hide from navbar when below it
+        setShowSearch(false);
       }
     };
 
@@ -30,23 +29,15 @@ const App = () => {
   }, []);
 
   return (
-    <>
-      <div>
-        <Navbar showSearch={showSearch} />
-      </div>
-      <div className="header">
-        <Header />
-      </div>
-      <div>
-        <SFooter />
-      </div>
-      <div className="Suggested">Suggested Services</div>
-      <div>
-        <Suggested />
-      </div>
-
-      <Footer/>
-    </>
+    <Router>
+      <Navbar showSearch={showSearch} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sign-in" element={<Sign_In />} /> {/* ✅ Add Sign In Route */}
+        <Route path="/sign-up" element={<Sign_Up />} />
+        <Route path="/view-service" element={<View_Service />} />
+      </Routes>
+    </Router>
   );
 };
 

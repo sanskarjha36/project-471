@@ -1,31 +1,31 @@
 /* Reset margin and padding */
 html, body {
-    margin: 0;
-    padding: 0;
-    padding-top: 3.5rem;
-    box-sizing: border-box; /* Consistent box-sizing */
-    width: 100%;
-    height: 100%;
-  }
-  
-  .navbar {
-    position: fixed; /* Keeps navbar at the top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 7rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 2%; /* Adds padding inside the navbar */
-    box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.35);
-    transition: 0.25s;
-    background: rgba(0, 0, 0, 0.798); /* Lower opacity */
-    backdrop-filter: blur(1rem); /* Keep navbar blur */
-    z-index: 1000; /* Ensure it's behind dropdown */
+  margin: 0;
+  padding: 0;
+  padding-top: 3.5rem;
+  box-sizing: border-box; /* Consistent box-sizing */
+  width: 100%;
+  height: 100%;
 }
-  
-.title {
+
+.navbar {
+  position: fixed; /* Keeps navbar at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2%; /* Adds padding inside the navbar */
+  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.35);
+  transition: 0.25s;
+  background: rgba(0, 0, 0, 0.798); /* Lower opacity */
+  backdrop-filter: blur(1rem); /* Keep navbar blur */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.v-title {
   padding: 1rem 2%;
   font-family: sans-serif;
   font-weight: 100;
@@ -33,13 +33,14 @@ html, body {
   color: beige;
   transition: 0.25s;
   margin-right: 10rem;
-  
+  cursor: pointer;
+
   /* Gradient applied to text */
-  background-image: linear-gradient(135deg, rgb(79, 4, 255), rgb(255, 139, 81), rgb(255, 255, 255), rgba(255, 32, 240, 0.8), rgb(255, 0, 119),rgb(255, 185, 116));
+  background-image: linear-gradient(135deg, rgb(79, 4, 255), rgb(255, 139, 81), rgb(255, 255, 255), rgba(255, 32, 240, 0.8), rgb(255, 0, 119), rgb(255, 185, 116));
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
+
   /* Animate gradient */
   animation: textGradient 12s infinite linear;
 }
@@ -50,49 +51,46 @@ html, body {
   100% { background-position: 0% 50%; }
 }
 
+.holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10rem;
+  height: 4.6rem;
+  background: rgb(62, 62, 62);
+  border-radius: 30rem;
+  padding-left: 1rem;
+  padding-right: 0.36rem;
+  border: 0.16rem solid rgba(245, 245, 220, 0.514);
+  cursor: pointer;
+}
 
+.account-icon {
+  width: 3.8rem; /* Adjust width */
+  height: 3.8rem; /* Adjust height */
+  cursor: pointer; /* Add hover effect */
+  transition: transform 0.2s; /* Smooth scaling effect */
+  border-radius: 100rem;
+  box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.462);
+}
 
-  .holder{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 10rem;
-    height: 4.6rem;
-    background: rgb(62, 62, 62);
-    border-radius: 30rem;
-    padding-left:1rem;
-    padding-right:0.36rem;
-    border: 0.16rem solid rgba(245, 245, 220, 0.514);
-    cursor: pointer;
-  }
-  
+.account-icon:hover {
+  box-shadow: 0px 0px 18px rgba(255, 247, 130, 0.462);
+}
 
-  .account-icon {
-    width: 3.8rem; /* Adjust width */
-    height: 3.8rem; /* Adjust height */
-    cursor: pointer; /* Add hover effect */
-    transition: transform 0.2s; /* Smooth scaling effect */
-    border-radius: 100rem;
-    box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.462);
-  }
-
-  .account-icon:hover {
-    box-shadow: 0px 0px 18px rgba(255, 247, 130, 0.462);
-  }
-
-/* Outer glowing search bar (acts like the gradient border) */
+/* Default: Hidden floating search bar */
 .floating-search {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
+  display: none; /* Hide by default */
   justify-content: center;
   align-items: center;
-  width: 60rem; 
+  width: 60rem;
   max-width: 90vw;
   height: 4rem;
   border-radius: 30rem;
-  
+
   /* Animated gradient background */
   background: linear-gradient(135deg, rgb(79, 4, 255), 
                                        rgb(255, 139, 81), 
@@ -102,9 +100,16 @@ html, body {
                                        rgb(255, 185, 116));
   background-size: 400% 400%;
   animation: borderGradient 6s infinite linear;
-
   box-shadow: 0rem 0rem 1.5rem rgba(0, 0, 0, 0.3);
-  padding: 0.1rem; /* Space to show gradient as a border */
+  padding: 0.1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show search bar when it gets the "visible" class */
+.floating-search.visible {
+  display: flex;
+  opacity: 1;
 }
 
 /* Inner search bar (solid background inside gradient border) */
@@ -131,11 +136,3 @@ html, body {
 }
 
 
-
-.floating-search:hover{
-  border: 0.16rem solid rgba(255, 228, 196, 0.884);
-  box-shadow: 0rem 0rem 2.4rem #fff5fa25;
-  transition: color 0.25s ease;
-  transition:0.25s ease-in-out;
-  cursor: pointer;
-}

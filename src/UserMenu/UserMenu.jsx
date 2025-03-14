@@ -1,28 +1,30 @@
-import React, { useState } from "react";
+//import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./UserMenu.css";
 
-const UserMenu = ({ accountImg }) => {
-  const [menuOpen, setMenuOpen] = useState(false);
+const UserMenu = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    console.log("User logged out");
+    navigate("/sign-in"); // Redirect to Sign In page
+  };
+  const handleDelete = () => {
+    console.log("User Deleted");
+    navigate("/sign-up"); // Redirect to Sign In page
+  };
+  const handleService = () => {
+    console.log("User Deleted");
+    navigate("/view-service"); // Redirect to Sign In page
+  };
 
   return (
-    <div className="user-menu-wrapper">
-      {/* User Icon */}
-      <img
-        src={accountImg}
-        alt="User Account"
-        className="account-icon"
-        onClick={() => setMenuOpen(!menuOpen)} // Toggle dropdown
-      />
-
-      {/* Dropdown appears when menuOpen is true */}
-      <div className={`user-dropdown ${menuOpen ? "show" : ""}`}>
-        <ul>
-          <li><a href="/profile">Profile</a></li>
-          <li><a href="/settings">Settings</a></li>
-          <li><a href="/logout">Logout</a></li>
-          <li><a href="/contactus">Contact Us</a></li>
-        </ul>
-      </div>
+    <div className="user-dropdown show">
+      <ul>
+        <li onClick={handleService} className="tag">Profile</li>
+        <li onClick={handleDelete} className="tag">Delete Account</li>
+        <li onClick={handleLogout} className="tag">Logout</li>
+      </ul>
     </div>
   );
 };

@@ -62,7 +62,16 @@
     transition:0.1s ease-in-out;
 }
 
-.user-dropdown li a:hover {
+.tag{
+    color: rgb(193, 193, 193); /* Default text color */
+    text-decoration: none;
+    display: block;
+    transition: color 0.2s ease; /* Smooth color transition */
+    transition:0.1s ease-in-out;
+    font-size: 2rem;
+}
+
+.tag:hover{
     color: rgb(255, 210, 156);
     font-size: 2.4rem;
     transition: color 0.2s ease; /* Smooth color transition */
