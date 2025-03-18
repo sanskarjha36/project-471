@@ -4,6 +4,7 @@
 
 .service-container {
     display: flex;
+    justify-content: space-between;  /* Ensures left and right sections are spaced apart */
     max-width: 100%;
     margin: 2rem auto;
     background: rgb(36, 36, 36);
@@ -16,7 +17,7 @@
 .reviews-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     margin-top: 3rem;
     width: 100%;
 }
@@ -227,6 +228,7 @@
 
 .service-info {
     width: 100%;
+    height: 32%;
     background: rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
     border-radius: 1rem;
@@ -281,4 +283,41 @@
     font-size: 3rem;
     font-weight: 100;
     color: bisque;
+}
+
+/* Modal Overlay (Background Dim) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+/* Chat Modal */
+.modal {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    background: rgba(36, 36, 36, 0.95);
+    border-radius: 1.5rem;
+    transform: translate(-50%, -50%) scale(0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in-out forwards, scaleIn 0.3s ease-in-out forwards;
 }

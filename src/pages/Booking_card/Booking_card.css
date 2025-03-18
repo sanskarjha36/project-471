@@ -71,12 +71,27 @@
     100% { background-position: 0% 50%; }
 }
 
-/* Booking Card Inputs */
+.Address_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.address-title {
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin-top: 1.5rem;
+    color: bisque;
+}
+
+/* Address Inputs */
 .booking-input {
     width: 80%;
     padding: 0.8rem;
     margin: 0.5rem 0;
-    border-radius: 3rem;
+    border-radius: 1rem;
     font-size: 1rem;
     background: rgba(0, 0, 0, 0.436);
     border: 0.16rem solid rgb(109, 109, 109);
@@ -84,10 +99,10 @@
 }
 
 .BC-i1{
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 .BC-i3{
-    margin-bottom: 2rem;
+    margin-top: 1rem;
 }
 
 /* Button Container */

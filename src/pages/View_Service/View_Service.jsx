@@ -1,11 +1,18 @@
 import { useState } from "react";
+import { X } from "lucide-react"; // Importing close icon
 import './View_Service.css';
 import carpenterImg from '../../assets/s_img1.jpeg'; // Replace with actual image path
 import BookingCard from "../Booking_card/Booking_card";
+import Chatbox from "../Chatbox/Chatbox";
 
 const View_Service = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [isReviewOpen, setIsReviewOpen] = useState(false); // State for review section toggle
+  const [isModalOpen, setIsModalOpen] = useState(false); // Chatbox modal state
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
 
   return (
     <div className="service-container">
@@ -17,8 +24,8 @@ const View_Service = () => {
 
         {/* Action Buttons BELOW the image */}
         <div className="service-buttons">
-          <button className="btn-contact">Contact Us</button>
-          <button className="btn-book" onClick={() => setIsBookingOpen(true)}>Book It</button>
+          <button className="btn-contact" onClick={toggleModal}>Contact Us</button>
+          <button className="btn-book">Book It</button>
         </div>
       </div>
 
@@ -47,10 +54,7 @@ const View_Service = () => {
         <div className="reviews-container">
           <div className="reviews-head">
             <div className='vs-r1'>Reviews</div>
-            <button 
-              className="btn-review" 
-              onClick={() => setIsReviewOpen(true)}>Add Review
-            </button>
+            <button className="btn-review" onClick={() => setIsReviewOpen(true)}>Add Review</button>
           </div>
 
           {/* Show Review Form When Button Clicked */}
@@ -93,9 +97,21 @@ const View_Service = () => {
         </div>
       </div>
 
-      {/* Booking Card Pop-up (Placed Outside .service-left to Center It) */}
+      {/* Booking Card Pop-up */}
       {isBookingOpen && <BookingCard onClose={() => setIsBookingOpen(false)} />}
-      
+
+      {/* Chat Modal Pop-up (Triggered by "Contact Us" button) */}
+      {isModalOpen && (
+        <>
+          <div className="modal-overlay" onClick={toggleModal}></div> {/* Background Overlay */}
+          <div className="modal">
+            <button className="close-btn" onClick={toggleModal}>
+              <X size={24} color="white" />
+            </button>
+            <div><Chatbox/></div>
+          </div>
+        </>
+      )}
     </div>
   );
 };
