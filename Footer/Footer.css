@@ -1,0 +1,47 @@
+.foot{
+    width: 100%;
+    height: 16rem;
+    background: black;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.v1 {
+    font-family: sans-serif;
+    font-weight: 200;
+    font-size: 3.6rem;
+    color: beige;
+    transition: 0.25s;
+    margin-right: 10rem;
+    
+    /* Gradient applied to text */
+    background-image: linear-gradient(135deg, rgb(79, 4, 255), rgb(255, 139, 81), beige, rgba(255, 32, 240, 0.8), rgb(255, 0, 119),rgb(255, 185, 116));
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Animate gradient */
+    animation: textGradient 8s infinite linear;
+  }
+  
+  @keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .v2{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+  }
+
+  .v2-2{
+    color: beige;
+    font-size: medium;
+    font-family: sans-serif;
+    font-weight: 100;
+    margin-bottom: 1rem;
+}

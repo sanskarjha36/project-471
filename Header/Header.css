@@ -1,0 +1,164 @@
+
+.Header {
+    display: flex;
+    flex-direction: column; /* Stacks HD1 and HD2 vertically */
+    align-items: center; /* Centers them horizontally */
+    justify-content: center; /* Centers them vertically */
+    height: 36vh; /* Full viewport height */
+    background-color: #333; /* Optional: Background color for testing */
+    transition: 0.5s;
+    box-shadow: 0px 10px 240px black inset;
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+    background-image: linear-gradient(135deg, rgb(68, 68, 68), rgba(255, 177, 32, 0.556),rgb(87, 102, 65));
+  }
+
+
+  @keyframes color{
+    0% {background-position:0 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0 50%;}
+    }
+    
+
+.HD1{
+    display: flex;
+    align-self: center;
+    color: antiquewhite;
+    font-family: sans-serif;
+    font-size: 5rem;
+    margin-top: 3rem;
+    font-weight: 100;
+    text-shadow: 2rem 2rem 3.6rem rgba(0, 0, 0, 0.964);
+}
+
+
+.card-container-1 {
+    display: flex;
+    justify-content: center; /* Centers cards instead of pushing them apart */
+    align-items: center;
+    width: 100%;
+    max-width: 80vw;
+    padding-top: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    margin: 0 auto;
+    gap: 0.5rem; /* Reduce gap to decrease spacing */
+    margin-bottom: 8rem;
+  }
+  .card-1 {
+    width: 45rem;
+    height: 5rem;
+    background-color: rgb(56, 59, 59);
+    border: 0.16rem solid rgba(245, 245, 220, 0.652);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0rem 0rem 8rem rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    cursor: pointer; /* Add hover effect */
+    transition: color 0.25s ease;
+    transition:0.25s ease-in-out;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 1.6rem;
+    color: rgba(245, 245, 220, 0.775);
+  }
+  .card-1:hover{
+    box-shadow: 0rem 0rem 4rem rgba(245, 245, 220, 0.603);
+    border: 0.18rem solid rgba(255, 228, 196, 0.836);
+    font-size: 1.8rem;
+    font-weight: 400;
+    cursor: pointer; /* Add hover effect */
+    transition:0.25s ease-in-out;
+    cursor: pointer;
+  }
+
+  .c1{
+    background: rgba(0, 0, 0, 0.283);
+    border: 0.18rem solid rgb(121, 121, 121);
+    border-radius: 0.3rem;
+    border-bottom-left-radius: 2rem;
+}
+.c2{
+    background: rgba(0, 0, 0, 0.283);
+    border: 0.18rem solid rgb(121, 121, 121);
+    border-radius: 0.3rem;
+}
+.c3{
+    background: rgba(0, 0, 0, 0.283);
+    border: 0.18rem solid rgb(121, 121, 121);
+    border-radius: 0.3rem;
+}
+.c4{
+    background: rgba(0, 0, 0, 0.283);
+    border: 0.18rem solid rgb(121, 121, 121);
+    border-radius: 0.3rem;
+    border-bottom-right-radius: 2rem;
+}
+
+/*
+.c1{
+    background: rgba(42, 150, 119, 0.1);
+    border: 0.18rem solid rgb(11, 216, 234);
+    border-radius: 0.3rem;
+    border-bottom-left-radius: 2rem;
+}
+.c2{
+    background: rgba(110, 42, 150, 0.1);
+    border: 0.18rem solid rgb(201, 11, 234);
+    border-radius: 0.3rem;
+}
+.c3{
+    background: rgba(150, 42, 42, 0.1);
+    border: 0.18rem solid rgb(234, 11, 93);
+    border-radius: 0.3rem;
+}
+.c4{
+    background: rgba(69, 150, 42, 0.1);
+    border: 0.18rem solid rgb(152, 234, 11);
+    border-radius: 0.3rem;
+    border-bottom-right-radius: 2rem;
+}
+*/
+.Lists{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 1rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-bottom: 2.4rem;
+}
+
+.search{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    margin-top: 8rem;
+    padding: 1.6rem;
+    width: 90rem;
+    height: 100%;
+    background: rgb(39, 39, 39);
+    border-radius: 30rem;
+    border: 0.16rem solid gray;
+    color: rgba(245, 245, 220, 0.635);
+    font-family: sans-serif;
+    font-weight: 100;
+    transition: color 0.25s ease;
+    transition:0.25s ease-in-out;
+}
+.search:hover{
+    border: 0.16rem solid rgba(255, 228, 196, 0.756);
+    box-shadow: 0rem 0rem 2.4rem #fff5fa25;
+    transition: color 0.25s ease;
+    transition:0.25s ease-in-out;
+    cursor: pointer;
+}
+

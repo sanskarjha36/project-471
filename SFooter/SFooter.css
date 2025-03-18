@@ -1,0 +1,66 @@
+.row1 {
+  display: flex;
+  justify-content: center; /* Pushes items apart */
+  align-items: center;
+  font-size: larger;
+  padding: 20px; /* Adds space inside the row */
+  gap: 1rem; /* Adds space between .suggest and .provider */
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 9rem;
+}
+
+.suggest{
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  background: rgba(255, 93, 93, 0.099);
+  border: 0.16rem solid rgb(255, 93, 93);
+  font-size: 2rem;
+  font-weight: 100;
+  color: beige;
+  border-bottom-left-radius: 30rem;
+  border-top-left-radius: 1.6rem;
+  border-top-right-radius: 1.6rem;
+  border-bottom-right-radius: 1.6rem;
+  transition: color 0.25s ease;
+    transition:0.25s ease-in-out;
+}
+.suggest:hover{
+  background: rgb(255, 93, 93);
+  box-shadow: 0rem 0rem 3rem rgba(195, 0, 255, 0.598);
+  color: black;
+  font-weight: 300;
+  transition: color 0.25s ease;
+    transition:0.25s ease-in-out;
+    cursor: pointer;
+}
+.provider{
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  background: rgba(93, 255, 190, 0.099);
+  border: 0.16rem solid rgb(93, 255, 190);
+  color: beige;
+  font-size: 2rem;
+  font-weight: 100;
+  border-bottom-left-radius: 1.6rem;
+  border-top-left-radius: 1.6rem;
+  border-top-right-radius: 1.6rem;
+  border-bottom-right-radius: 30rem;
+  transition: color 0.25s ease;
+    transition:0.25s ease-in-out;
+}
+.provider:hover{
+  background: rgb(93, 255, 190);
+  box-shadow: 0rem 0rem 3rem rgba(0, 255, 247, 0.598);
+  color: black;
+  font-weight: 300;
+  transition: color 0.25s ease;
+    transition:0.25s ease-in-out;
+    cursor: pointer;
+}
