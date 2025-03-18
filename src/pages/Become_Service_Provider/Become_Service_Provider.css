@@ -1,0 +1,176 @@
+.BSP-Row-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+}
+
+
+.BSP-Column-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.BSP-Column-2{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.BSP-image-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    width: 32rem;
+    height: 32rem;
+    color: bisque;
+    background: rgba(0, 0, 0, 0.445);
+    border: 0.18rem solid rgb(98, 98, 98);
+    border-radius: 2rem;
+    box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.403);
+}
+/*
+.BSP-Button-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 160;
+    width: 24rem;
+    height: 3.6rem;
+    font-size: 1.5rem;
+    color: bisque;
+    border-radius:30rem;
+    background: rgba(95, 255, 138, 0.152);
+    border: 0.16rem solid rgb(95, 255, 138);
+    box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.458);
+    transition: color 0.25s ease;
+    transition:0.25s ease-in-out;
+}
+.BSP-Button-1:hover{
+    background: rgb(95, 255, 138);
+    color:black;
+    transition: color 0.25s ease;
+    transition:0.25s ease-in-out;
+}
+
+.BSP-Button-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 160;
+    width: 24rem;
+    height: 3.6rem;
+    font-size: 1.5rem;
+    color: bisque;
+    border-radius:30rem;
+    background: rgba(228, 255, 95, 0.079);
+    border: 0.16rem solid bisque;
+    box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.458);
+    transition: color 0.25s ease;
+    transition:0.25s ease-in-out;
+}
+.BSP-Button-2:hover{
+    background: rgb(255, 250, 95);
+    color:black;
+    transition: color 0.25s ease;
+    transition:0.25s ease-in-out;
+}
+*/
+
+.Service-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 1.6rem;
+    width: 30rem;
+    height: 4rem;
+    color: rgba(255, 228, 196, 0.457);
+    background: rgba(0, 0, 0, 0.445);
+    border: 0.18rem solid rgb(98, 98, 98);
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.403);
+}
+
+.Service-location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 1.6rem;
+    width: 30rem;
+    height: 4rem;
+    color: rgba(255, 228, 196, 0.457);
+    background: rgba(0, 0, 0, 0.445);
+    border: 0.18rem solid rgb(98, 98, 98);
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.403);
+}
+
+.Service-Price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 1.6rem;
+    width: 30rem;
+    height: 4rem;
+    color: rgba(255, 228, 196, 0.457);
+    background: rgba(0, 0, 0, 0.445);
+    border: 0.18rem solid rgb(98, 98, 98);
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.403);
+}
+
+.Service-Description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 1.6rem;
+    width: 70rem;
+    height: 30rem;
+    color: rgba(255, 228, 196, 0.457);
+    background: rgba(0, 0, 0, 0.445);
+    border: 0.18rem solid rgb(98, 98, 98);
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.403);
+}
+
+.BSP-Button-3 {
+    position: fixed; /* Fixes it to the viewport */
+    bottom: 2rem; /* Distance from the bottom */
+    right: 2rem; /* Distance from the right */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 160;
+    width: 14rem;
+    height: 3.6rem;
+    font-size: 1.5rem;
+    color: bisque;
+    border-radius: 30rem;
+    background: rgba(95, 231, 255, 0.152);
+    border: 0.16rem solid rgb(95, 239, 255);
+    box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.458);
+    transition: 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+.BSP-Button-3:hover {
+    background: rgb(95, 255, 250);
+    color: black;
+    transition: 0.25s ease-in-out;
+}

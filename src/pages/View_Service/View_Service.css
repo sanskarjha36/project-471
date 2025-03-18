@@ -1,0 +1,284 @@
+* {
+    font-family: sans-serif;
+}
+
+.service-container {
+    display: flex;
+    max-width: 100%;
+    margin: 2rem auto;
+    background: rgb(36, 36, 36);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Fix for the Reviews section */
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 3rem;
+    width: 100%;
+}
+.review-name-1{
+    font-family: sans-serif;
+    font-weight: 100;
+    color: bisque;
+    font-size: 3rem;
+}
+.review{
+    background: rgba(0, 0, 0, 0.198);
+    margin: 3rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 1.6rem;
+    border-radius: 2.4rem;
+    box-shadow: 0rem 0rem 4rem rgba(0, 0, 0, 0.512);
+    border: 0.18rem solid rgb(116, 116, 116);
+}
+.reviews-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.VS-addreview {
+    background: rgba(86, 86, 86, 0.333);
+    height: auto;
+    margin: 3rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0rem 0rem 4rem rgba(0, 0, 0, 0.512);
+    border: 0.18rem solid rgb(116, 116, 116);
+    border: none;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+.review-textarea {
+    margin: 2rem;
+    width: 90%;
+    height: 8rem;
+    border-radius: 1rem;
+    border: 0.16rem solid rgb(103, 103, 103);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 1rem;
+    font-size: 1.2rem;
+    resize: none;
+}
+.review-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Submit and Cancel Buttons */
+.btn-submit, .btn-cancel {
+    height: 3rem;
+    width: 8rem;
+    font-size: 1.2rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+}
+
+.btn-submit {
+    background: rgba(108, 255, 184, 0.157);
+    border: 0.18rem solid rgb(108, 255, 184);
+    color: beige;
+}
+
+.btn-cancel {
+    background: #ff5555;
+    color: beige;
+}
+
+.btn-submit:hover {
+    background: rgb(108, 255, 184);
+    color: black;
+}
+
+.btn-cancel:hover {
+    background: #ff4444;
+}
+
+
+.review-name{
+    font-size: 2rem;
+    color: bisque;
+}
+.review-stars{
+    color: goldenrod;
+    font-size: 1.6rem;
+    text-align: right;
+    margin-right: 1rem;
+}
+.vs-text{
+    margin-top: 2rem;
+    color: rgba(240, 248, 255, 0.659);
+    font-size: 1.8rem;
+
+}
+.reviews-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.review-header{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;  /* Ensures name is left and stars are right */
+    align-items: center;
+    width: 100%;
+}
+
+/* Left side contains image + buttons */
+.service-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center everything */
+}
+
+.service-image img {
+    width: 40rem;
+    height: auto;
+    border-radius: 1rem;
+}
+
+/* Buttons under image */
+.service-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-contact, .btn-book {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border-radius: 30rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+    max-width: 100%;
+    box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.469);
+}
+
+.btn-contact {
+    background: rgba(50, 255, 159, 0.154);
+    border: 0.18rem solid rgb(50, 255, 159);
+    color: beige;
+}
+
+.btn-book {
+    background: rgba(255, 228, 196, 0.161);
+    border: 0.18rem solid bisque;
+    color: beige;
+}
+
+.btn-contact:hover {
+    background: rgb(48, 255, 151);
+    color: black;
+}
+
+.btn-book:hover {
+    background: rgb(255, 228, 196);
+    color: black;
+}
+
+.service-details {
+    margin-left: 2rem;
+    color: white;
+    flex: 1;
+}
+
+.service-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-location {
+    font-size: 1.2rem;
+    color: rgb(189, 189, 189);
+}
+
+.service-price {
+    font-size: 1.5rem;
+    color: gold;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.service-rating {
+    font-size: 1.4rem;
+    color: gold;
+    margin-top: 0.3rem;
+}
+
+.service-info {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    box-shadow: 0rem 0rem 4rem rgba(0, 0, 0, 0.403);
+}
+
+.service-info h3 span {
+    color: rgb(0, 255, 200);
+}
+
+.service-info ul {
+    padding-left: 1.5rem;
+}
+
+.service-info li {
+    margin-bottom: 0.5rem;
+}
+
+/* Reviews Section Fix */
+.reviews-section {
+    margin-top: 2rem;
+}
+
+.reviews-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Review Button */
+.btn-review {
+    height: 3.6rem;
+    width: 15rem;
+    font-size: 1.7rem;
+    background: rgba(0, 255, 251, 0.1);
+    color: rgb(255, 255, 255);
+    border: 0.16rem solid rgb(131, 224, 255);
+    padding: 1rem;
+    padding-bottom: 3rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-review:hover {
+    background: lightblue;
+    color: black;
+}
+
+.vs-r1{
+    font-size: 3rem;
+    font-weight: 100;
+    color: bisque;
+}
